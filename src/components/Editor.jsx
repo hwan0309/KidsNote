@@ -63,7 +63,6 @@ const Editor = () => {
     });
   };
 
-  const emotionId = 3;
   return (
     <div className="Editor">
       <section className="date_section">
@@ -81,9 +80,17 @@ const Editor = () => {
         <div className="emotion_list_wrapper">
           {emotionList.map((item) => (
             <EmotionItem
+              onClick={() =>
+                onChangeInput({
+                  target: {
+                    name: "emotionId",
+                    value: item.emotionId,
+                  },
+                })
+              }
               key={item.emotionId}
               {...item}
-              isSelected={item.emotionId === emotionId}
+              isSelected={item.emotionId === input.emotionId}
             />
           ))}
         </div>
