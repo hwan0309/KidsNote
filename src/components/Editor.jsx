@@ -46,12 +46,34 @@ const Editor = () => {
     emotionId: 3,
     content: "",
   });
+
+  const onChangeInput = (e) => {
+    console.log(e.target.name);
+    console.log(e.target.value);
+
+    let name = e.target.name;
+    let value = e.target.value;
+
+    if (name === "createdDate") {
+      value = new Date(value);
+    }
+    setInput({
+      ...input,
+      [name]: value,
+    });
+  };
+
   const emotionId = 3;
   return (
     <div className="Editor">
       <section className="date_section">
         <h4>오늘의 날짜</h4>
-        <input value={getStringedDate(input.createdDate)} type="date" />
+        <input
+          name="createdDate"
+          onChange={onChangeInput}
+          value={getStringedDate(input.createdDate)}
+          type="date"
+        />
       </section>
 
       <section className="emotion_section">
