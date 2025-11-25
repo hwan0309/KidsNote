@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const DiaryItem = ({ id, emotionId, createdDate, content }) => {
   const nav = useNavigate();
+
   return (
     <div onClick={() => nav(`/diary/${id}`)} className="DiaryItem">
       <div className={`img_section img_section_${emotionId}`}>
