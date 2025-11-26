@@ -17,7 +17,7 @@ const Viewer = ({ emotionId, content }) => {
         </div>
       </section>
       <section className="content_section">
-        <h4>오늘의 다이어리</h4>
+        <h4>오늘의 일기장</h4>
         <div className="content_wrapper">
           <p>{content}</p>
         </div>

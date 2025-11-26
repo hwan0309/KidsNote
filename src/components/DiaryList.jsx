@@ -33,7 +33,7 @@ const DiaryList = ({ data }) => {
         </select>
         <Button
           onClick={() => nav("/new")}
-          text={"새 다이어리"}
+          text={"새 일기장"}
           type={"POSITIVE"}
         />
       </div>
